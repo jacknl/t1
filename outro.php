@@ -1,10 +1,7 @@
 <?php 
 
 function getAvatar($email){
-	
-	//CORRIGIR
-	
-	/*
+	//pega avatar
     $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower(trim($email)))."?d=".urlencode('img/velhinha.jpg')."&s=150";
     
   	$cURL = curl_init($grav_url);
@@ -17,24 +14,24 @@ function getAvatar($email){
   	$result = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
   	curl_close($cURL);
   	
-  	if($result == 200){
+  	//if($result == 200){
   		return $grav_url;
-  	}
-  	else{*/
+  	/*}
+  	else{
   		return 'img/velhinha.jpg';
-  	//}
+  	}*/
     
 }
 
 function selecionaImagem($value){
 	if($value == 1){
-		return '<img src="img/o.png" height="80" width="80">';
+		return '<img src="img/o.png" height="80" width="80" alt="">';
 	}
 	else if($value == 2){
-		return '<img src="img/x.png" height="80" width="80">';
+		return '<img src="img/x.png" height="80" width="80" alt="">';
 	}
 	else{
-		return '<img src="img/loader.gif" height="80" width="80">';
+		return '<img src="img/loader.gif" height="80" width="80" alt="">';
 	}
 }
 

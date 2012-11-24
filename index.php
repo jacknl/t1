@@ -234,9 +234,9 @@ else{
 	}
 	else{
 		
-		echo '<div class="jogadores"><div><img src="'.getAvatar($email1).'" height="150" width="130"></div>';
+		echo '<div class="jogadores"><div><img src="'.getAvatar($email1).'" height="150" width="130" alt=""></div>';
 		echo '<div class="vs">VS.</div>';
-		echo '<div><img src="'.getAvatar($email2).'" height="150" width="130">';
+		echo '<div><img src="'.getAvatar($email2).'" height="150" width="130" alt=""></div>';
 		echo '<div class="jogador1"><p>'.$jogador1.'</p></div><div class="jogador2"><p>'.$jogador2.'</p></div></div>';
 		
 
