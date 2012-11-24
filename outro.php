@@ -1,7 +1,7 @@
 <?php 
 
 function getAvatar($email){
-	/*
+	
     $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower(trim($email)))."?d=".urlencode('img/velhinha.jpg')."&s=150";
     
   	$cURL = curl_init($grav_url);
@@ -17,9 +17,9 @@ function getAvatar($email){
   	if($result == 200){
   		return $grav_url;
   	}
-  	else{*/
+  	else{
   		return 'img/velhinha.jpg';
-  	//}
+  	}
     
 }
 
