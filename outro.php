@@ -31,7 +31,7 @@ function selecionaImagem($value){
 		return '<img src="img/x.png" height="80" width="80" alt="">';
 	}
 	else{
-		return '<img src="img/loader.gif" height="80" width="80" alt="">';
+		return '<img src="img/branco.jpg" height="80" width="80" alt="">';
 	}
 }
 

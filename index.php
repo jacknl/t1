@@ -319,7 +319,7 @@ else{
 				//campos nao preenchidos
 				if($value == 0 && $seleciona_jogador && $seleciona_jogador == $jogador_nome){
 					$html .= '<a href="http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'&jogada='.$key.'">';
-					$html .= '<img src="img/loader.gif" height="80" width="80" alt=""></a>';
+					$html .= '<img src="img/branco.jpg" height="80" width="80" alt=""></a>';
 				}
 				else{
 					$html .= selecionaImagem($value);
