@@ -4,12 +4,12 @@ session_start();
 include 'outro.php';
 
 $tmp = array();
-if(!$_GET || !$_GET['partida']) header('Location: http://localhost/t1/index.php?partida='.randNomeArquivo());
+if(!$_GET || !$_GET['partida']) header('Location: http://gustavohk.phpfogapp.com/t1/index.php?partida='.randNomeArquivo());
 else{
 	//passa o valor para inteiro
 	$partida = (int)$_GET['partida'];
 	//quando o valor é uma string e passado para um inteiro, ele fica igual a 0
-	if($partida == 0) header('Location: http://localhost/t1/index.php?partida='.randNomeArquivo());
+	if($partida == 0) header('Location: http://gustavohk.phpfogapp.com/t1/index.php?partida='.randNomeArquivo());
 	
 	//configuracoes inciais
 	$espectador = false;
@@ -100,7 +100,7 @@ else{
 					
 					//salva a opcao escolhida no arquivo
 					file_put_contents($file_name, $tmp[0][0].'>'.$tmp[0][1].';'.$tmp[1][0].'>'.$tmp[1][1].'>'.$tmp[1][2].'>'.$tmp[1][3].'>'.$tmp[1][4].'>'.$tmp[1][5].'>'.$tmp[1][6].'>'.$tmp[1][7].'>'.$tmp[1][8].';'.$tmp[2]);
-					header('Location: http://localhost/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email);
+					header('Location: http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email);
 				}
 				
 				$jogo_velha = verificaJogoVelha($tmp[1]);
@@ -212,8 +212,8 @@ else{
 <head>
 
 <?php
-	if($jogador_nome) echo '<meta http-equiv="refresh" content="2;URL=\'http://localhost/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'\'">'; 
-	else if($espectador) echo '<meta http-equiv="refresh" content="2;URL=\'http://localhost/t1/index.php?partida='.$partida.'">';
+	if($jogador_nome) echo '<meta http-equiv="refresh" content="2;URL=\'http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'\'">'; 
+	else if($espectador) echo '<meta http-equiv="refresh" content="2;URL=\'http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'">';
 ?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -230,7 +230,7 @@ else{
 		echo '<div class="tela_inicial"><div>Apelido: <input type="text" name="'.$jogador.'"></div>';
 		echo '<div class="e-mail">E-mail: <input type="text" name="email"></div>';
 		echo '<div class="ok"><input type="submit" value="OK"></div></div>';
-		echo '<div class="link">Link: <input type="text" value="http://localhost/t1/index.php?partida='.$partida.'" size="35"></div></form>';
+		echo '<div class="link">Link: <input type="text" value="http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'" size="35"></div></form>';
 	}
 	else{
 		
@@ -257,7 +257,7 @@ else{
 			else{
 				//campos nao preenchidos
 				if($value == 0 && $seleciona_jogador && $seleciona_jogador == $jogador_nome){
-					$html .= '<a href="http://localhost/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'&jogada='.$key.'">';
+					$html .= '<a href="http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'&jogada='.$key.'">';
 					$html .= '<img src="img/loader.gif" height="80" width="80" alt=""></a>';
 				}
 				else{
