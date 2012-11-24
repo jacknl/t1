@@ -14,12 +14,12 @@ function getAvatar($email){
   	$result = curl_getinfo($cURL, CURLINFO_HTTP_CODE);
   	curl_close($cURL);
   	
-  	//if($result == 200){
+  	if($result == 200){
   		return $grav_url;
-  	/*}
+  	}
   	else{
   		return 'img/velhinha.jpg';
-  	}*/
+  	}
     
 }
 
