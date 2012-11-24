@@ -1,7 +1,7 @@
 <?php 
 
 function getAvatar($email){
-	//pega avatar
+	/*
     $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower(trim($email)))."?d=".urlencode('img/velhinha.jpg')."&s=150";
     
   	$cURL = curl_init($grav_url);
@@ -17,9 +17,9 @@ function getAvatar($email){
   	if($result == 200){
   		return $grav_url;
   	}
-  	else{
+  	else{*/
   		return 'img/velhinha.jpg';
-  	}
+  	//}
     
 }
 
@@ -47,6 +47,17 @@ function randNomeArquivo(){
 	}
 }
 
+function deletarArquivos(){
+	for($i = 0; $i < 100; $i++){
+		for($j = 0; $j < 100; $j++){
+			print_r((int)file_exists('localhost/t1/arquivos/'.$i.'/'.$j.'/'.$i.$j.'.txt'));
+			if(file_exists('arquivos/'.$i.'/'.$j.'/'.$i.$j.'.txt')){
+				unlink('arquivos/'.$i.'/'.$j.'/'.$i.$j.'.txt');
+			}
+		}
+	}
+}
+
 function verificaJogoVelha($jogo){
 	//valor 0 => nao jogado
 	//valor 1 => jogador 1
@@ -66,7 +77,7 @@ function verificaJogoVelha($jogo){
 			return $jogo[0];
 		}
 	}
-	else if($jogo[2] != 0){
+	if($jogo[2] != 0){
 		//terceira vertical
 		if($jogo[2] == $jogo[5] && $jogo[2] == $jogo[8]){
 			return $jogo[2];
@@ -76,18 +87,18 @@ function verificaJogoVelha($jogo){
 			return $jogo[2];
 		}
 	}
-	else if($jogo[7] != 0){
+	if($jogo[7] != 0){
 		//terceira horizontal
-		if($jogo[6] == $jogo[7] && $jogo[6] == $jogo[8]){
-			return $jogo[4];
+		if($jogo[6] == $jogo[7] && $jogo[7] == $jogo[8]){
+			return $jogo[7];
 		}
 		//segunda vertical
 		else if($jogo[1] == $jogo[7] && $jogo[4] == $jogo[7]){
-			return $jogo[1];
+			return $jogo[7];
 		}
 	}
 	//segunda horizontal
-	else if($jogo[3] != 0 && $jogo[3] == $jogo[4] && $jogo[3] == $jogo[5]){
+	if($jogo[3] != 0 && $jogo[3] == $jogo[4] && $jogo[3] == $jogo[5]){
 		return $jogo[3];
 	}
 	

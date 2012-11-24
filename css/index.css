@@ -6,8 +6,13 @@ body{
 	height: 100%;
 }
 
+.principal{
+	margin: auto;
+	width: 500px;
+}
+
 .table{
-	width: 100%;
+	width: 255px;
 	margin: auto;
 }
 table{
@@ -97,7 +102,6 @@ input{
 	width: 130px;
 	height: 25px;
 	margin-top: -25px;
-	position: absolute;
 	background-color: #111;
 	opacity: 0.7;
 	color: #EEE;
@@ -109,6 +113,21 @@ input{
 }
 
 .jogador1{
-	margin-left: -342px;
-	float: left;
+	margin-top: 125px;
+	margin-left: -472px;
+}
+
+.resultado{
+	display: table;
+	margin: 10px auto 10px auto;
+	width: 300px;
+	height: 25px;
+	border: solid 2px #444;
+	border-radius: 5px;
+	background-color: #BBB;
+}
+
+.resultado p{
+	margin: 2px;
+	text-align: center;
 }
