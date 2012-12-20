@@ -261,8 +261,8 @@ else{
 <head>
 
 <?php
-	if($jogador_nome) echo '<meta http-equiv="refresh" content="2;URL=\'http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'\'">'; 
-	else if($espectador) echo '<meta http-equiv="refresh" content="2;URL=\'http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'">';
+	if($jogador_nome) echo '<meta http-equiv="refresh" content="4;URL=\'http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'&jogador='.$jogador_nome.'&email='.$email.'\'">'; 
+	else if($espectador) echo '<meta http-equiv="refresh" content="4;URL=\'http://gustavohk.phpfogapp.com/t1/index.php?partida='.$partida.'">';
 ?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
